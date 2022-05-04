@@ -26,20 +26,62 @@
             color: white;
         }
 
-        nav {
-            float: left;
+        nav ul {
+            margin: 0;
+            padding: 0;
             width: 7em;
-            background: #FDD;
+            background: white;
+            border: 1px solid;
+        }
+
+        nav li {
+            position: relative;
+            list-style: none;
+            margin: 0;
+            border-bottom: 1px solid #CCC;
+        }
+
+        nav ul ul {
+            position: absolute;
+            top: 0;
+            left: 7em;
+            display: block;
+        }
+
+        nav li a {
+            display: block;
+            padding: 0.25em 0 0.25em 0.5em;
+            text-decoration: none;
+        }
+
+        nav li:hover {
+            background: #EBB;
+        }
+
+        nav li.submenu {
+            background: url(http://...submenu.gif) 95% 50% no-repeat;
+        }
+
+        nav li.submenu:hover {
+            background-color: #EDD;
+        }
+
+        nav ul.level1 li.submenu:hover ul.level2,
+        nav ul.level2 li.submenu:hover ul.level3 {
+            display:block;
         }
     </style>
     <title> Ashton Baker's Webpage</title>
     </head>
     <body>
-        <ul>
-            <li><a href='#about'>About Me</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href='#about'>About Me</a></li>
+            </ul>
+            </nav>
+        <main>
         <h1> Ashton Baker's Webpage!!!1! </h1>
-        <h2> About Me </h2>
+        <h2> <a name ="about">About Me </a></h2>
         <p> I was born on October 5th, 2003. I have spent all of my life in Corpus, and attended Flour Bluff for 12 years.</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bayfront-1.jpg/300px-Bayfront-1.jpg">
         <img src="https://texasbob.com/stadium/simages/206.jpg" width=300 height=200>
@@ -47,5 +89,6 @@
         <p> I love playing guitar. I have been playing guitar for 2 years, and own two expensive guitars. One is a Mexican-made Fender Stratocaster, and a Dean ML.</p>
         <img src="https://media.musiciansfriend.com/is/image/MMGS7/Player-Stratocaster-HSS-Plus-Top-Maple-Fingerboard-Limited-Edition-Electric-Guitar-Blue-Burst/L46829000001000-00-500x500.jpg">
         <img src="https://armadillo.sirv.com/assets/web/feature/mlselqmosb.png">
+        </main>
     </body>
 </html>
